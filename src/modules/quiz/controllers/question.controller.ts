@@ -1,6 +1,6 @@
 import { Question } from '../entities/question.entity';
 import { QuestionService } from '../services/question.service';
-import { CreateQuestionDto } from '../dto/CreateQuestion.dto';
+import { CreateQuestionDto } from '../dto/create-question.dto';
 import {
   Body,
   Controller,

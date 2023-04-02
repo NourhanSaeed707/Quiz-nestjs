@@ -8,7 +8,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { HttpCode, Param, UsePipes } from '@nestjs/common/decorators';
-import { CreateQuizDto } from '../dto/CreateQuiz.dto';
+import { CreateQuizDto } from '../dto/create-quiz.dto';
 import { Quiz } from '../entities/quiz.entity';
 
 @Controller('quiz')

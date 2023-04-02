@@ -1,9 +1,9 @@
 import { QuizRepository } from '../quiz.repository';
-import { CreateQuizDto } from '../dto/CreateQuiz.dto';
+import { CreateQuizDto } from '../dto/create-quiz.dto';
 import { Question } from '../entities/question.entity';
 import { Injectable } from '@nestjs/common';
 import { DataSource } from 'typeorm';
-import { CreateQuestionDto } from '../dto/CreateQuestion.dto';
+import { CreateQuestionDto } from '../dto/create-question.dto';
 import { Quiz } from '../entities/quiz.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 
