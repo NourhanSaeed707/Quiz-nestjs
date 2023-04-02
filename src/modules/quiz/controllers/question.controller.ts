@@ -1,14 +1,15 @@
-import { Question } from './question.entity';
-import { QuestionService } from './question.service';
-import { CreateQuestionDto } from './dto/CreateQuestion.dto';
+import { Question } from '../entities/question.entity';
+import { QuestionService } from '../services/question.service';
+import { CreateQuestionDto } from '../dto/CreateQuestion.dto';
 import {
   Body,
   Controller,
+  Get,
   Post,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { QuizService } from './quiz.service';
+import { QuizService } from '../services/quiz.service';
 
 @Controller('question')
 export class QuestionController {
@@ -17,7 +18,7 @@ export class QuestionController {
     private quizService: QuizService,
   ) {}
 
-  @Post('/')
+  @Post('/create')
   @UsePipes(ValidationPipe)
   async saveQuestion(@Body() question: CreateQuestionDto): Promise<Question> {
     const quiz = await this.quizService.getQuizById(question.quizId);
